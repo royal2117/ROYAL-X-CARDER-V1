@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROYAL X CARDER</title>
+
+  <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<div class="particles"></div>
+
+  <!-- LOADER -->
+  <div class="loader">
+    <h1>ROYAL X CARDER</h1>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+
+    <div class="sidebar-header">
+      <h2>ROYAL X</h2>
+      <i class="fas fa-times" onclick="closeMenu()"></i>
+    </div>
+
+  <a href="#" onclick="showHome()">🏠 Home</a>
+    <a href="#" onclick="showPurchased()">🛒 Purchased Cards</a>
+ <a href="#" onclick="showTransactions()">📜 Transaction History</a>
+
+    <a href="https://t.me/royal_x_carder" target="_blank">
+      📞 Contact Support
+    </a>
+
+    <a href="https://t.me/+398zN3L-UbQxNDdl" target="_blank">
+      ✅ Selling Proofs
+    </a>
+
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+      <div class="menu-btn" onclick="openMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+<div class="live-time" id="liveTime">
+  12:00 AM
+</div>
+
+      <div class="wallet-box">
+        <span id="balance">₹0</span>
+
+        <button onclick="openWallet()">
+          <i class="fas fa-plus"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- TITLE -->
+    <div class="hero">
+      <h1>ROYAL X CARDER</h1>
+      <p>Premium Gaming Cards Store</p>
+    </div>
+
+    <!-- CARD SECTION -->
+
+<!-- PAGES -->
+
+    <div id="homePage">
+    <div class="cards-container">
+
+      <div class="card bronze">
+        <h2>BRONZE CARD</h2>
+        <h3>₹399</h3>
+        <p>Value Up To ₹2500+</p>
+        <button onclick="buyCard(399)">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="card silver">
+        <h2>SILVER CARD</h2>
+        <h3>₹799</h3>
+        <p>Value Up To ₹6000+</p>
+        <button onclick="buyCard(799)">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="card gold">
+        <h2>GOLDEN CARD</h2>
+        <h3>₹1299</h3>
+        <p>Value Up To ₹10000+</p>
+        <button onclick="buyCard(1299)">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="card platinum">
+        <h2>PLATINUM CARD</h2>
+        <h3>₹1999</h3>
+        <p>Value Up To ₹20000+</p>
+        <button onclick="buyCard(1999)">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="card diamond">
+        <h2>DIAMOND CARD</h2>
+        <h3>₹4999</h3>
+        <p>Value Up To ₹50000+</p>
+        <button onclick="buyCard(4999)">
+          BUY NOW
+        </button>
+      </div>
+
+      <div class="card premium">
+        <h2>PREMIUM CARD</h2>
+        <h3>₹10000</h3>
+        <p>Value Up To ₹1,50,000+</p>
+        <button onclick="buyCard(10000)">
+          BUY NOW
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- PURCHASED PAGE -->
+
+<div id="purchasedPage" class="hidden-page">
+
+  <div class="page-box">
+    <h1>Purchased Cards</h1>
+
+<div id="purchasedList">
+
+  <div class="empty-box"
+  id="emptyPurchase">
+
+    No Purchases Yet
+
+  </div>
+
+</div>
+
+  </div>
+
+</div>
+
+<!-- TRANSACTION PAGE -->
+
+<div id="transactionPage" class="hidden-page">
+
+  <div class="page-box">
+    <h1>Transaction History</h1>
+
+  <div id="transactionList"></div>
+
+  </div>
+
+</div>
+
+<!-- CARD PAGE -->
+
+<div class="card-page" id="cardPage">
+
+  <div class="card-view">
+
+    <img src="card.png" class="real-card">
+
+    <h2>Your Purchase Is Ready</h2>
+
+    <p>
+      IF ANY PROBLEM OR ANY CONFUSION
+      TO CLAIM THE CARD CLICK HERE
+      AND DM US
+    </p>
+
+    <a href="https://t.me/royal_x_carder"
+    target="_blank">
+
+      <button class="claim-btn">
+        CLAIM CARD
+      </button>
+
+    </a>
+
+    <button class="back-btn"
+    onclick="closeCardPage()">
+
+      BACK
+
+    </button>
+
+  </div>
+
+</div>
+
+  <!-- WALLET POPUP -->
+  <div class="wallet-popup" id="walletPopup">
+
+    <div class="wallet-content">
+
+      <span class="close-btn" onclick="closeWallet()">
+        ✖
+      </span>
+
+      <h2>TOP UP WALLET</h2>
+
+      <img src="qr.png" class="qr">
+
+      <input type="number" placeholder="Enter Amount">
+
+     <input type="text"
+id="utr"
+placeholder="Enter UTR Number">
+
+    <input type="file"
+id="screenshot">
+
+      <p class="note">
+        Fake payment screenshots are strictly banned from our community.
+      </p>
+
+      <button class="submit-btn">
+        Submit
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- NOTIFICATION -->
+  <div class="notification" id="notification"></div>
+
+  <script src="script.js"></script>
+  <script type="module" src="firebase.js"></script>
+
+</body>
+</html>
